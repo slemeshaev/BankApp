@@ -9,21 +9,39 @@ import UIKit
 
 class LoanViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    // MARK: - Outlets
+    // сумма кредита
+    @IBOutlet weak var pvTextField: UITextField!
+    // срок (месяцев)
+    @IBOutlet weak var nperTextField: UITextField!
+    // годовой процент
+    @IBOutlet weak var rateTextField: UITextField!
+    // ежемесячный платеж
+    @IBOutlet weak var monthlyPaymentLabel: UILabel!
+    
+    // MARK: - Inherited Methods
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateMonthlyPaymentLabel()
     }
-    */
-
+    
+    // MARK: - Methods
+    func updateMonthlyPaymentLabel() {
+        print(#line, #function,
+              pvTextField.text,
+              nperTextField.text,
+              rateTextField.text,
+              monthlyPaymentLabel.text)
+    }
+    
+    // MARK: - Actions
+    @IBAction func fieldEditingChanged(_ sender: UITextField) {
+        updateMonthlyPaymentLabel()
+    }
+    
 }
