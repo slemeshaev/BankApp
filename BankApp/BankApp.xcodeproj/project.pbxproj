@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		66101E29257E600C00E61B1E /* LoanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66101E28257E600C00E61B1E /* LoanViewController.swift */; };
 		6638A4A7257EB21C00475BBD /* ExcelFormulas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6638A4A6257EB21B00475BBD /* ExcelFormulas.swift */; };
+		6638A4AE257EBFE900475BBD /* ScreenShot01.png in Resources */ = {isa = PBXBuildFile; fileRef = 6638A4AC257EBFE900475BBD /* ScreenShot01.png */; };
+		6638A4AF257EBFE900475BBD /* ScreenShot02.png in Resources */ = {isa = PBXBuildFile; fileRef = 6638A4AD257EBFE900475BBD /* ScreenShot02.png */; };
 		6649C17F257916BF0021D295 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6649C17E257916BF0021D295 /* AppDelegate.swift */; };
 		6649C181257916BF0021D295 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6649C180257916BF0021D295 /* SceneDelegate.swift */; };
 		6649C183257916BF0021D295 /* BalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6649C182257916BF0021D295 /* BalanceViewController.swift */; };
@@ -20,6 +22,8 @@
 /* Begin PBXFileReference section */
 		66101E28257E600C00E61B1E /* LoanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanViewController.swift; sourceTree = "<group>"; };
 		6638A4A6257EB21B00475BBD /* ExcelFormulas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcelFormulas.swift; sourceTree = "<group>"; };
+		6638A4AC257EBFE900475BBD /* ScreenShot01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScreenShot01.png; sourceTree = "<group>"; };
+		6638A4AD257EBFE900475BBD /* ScreenShot02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScreenShot02.png; sourceTree = "<group>"; };
 		6649C17B257916BF0021D295 /* BankApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6649C17E257916BF0021D295 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6649C180257916BF0021D295 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +54,15 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		6638A4AB257EBFD600475BBD /* ScreenShots */ = {
+			isa = PBXGroup;
+			children = (
+				6638A4AC257EBFE900475BBD /* ScreenShot01.png */,
+				6638A4AD257EBFE900475BBD /* ScreenShot02.png */,
+			);
+			path = ScreenShots;
+			sourceTree = "<group>";
+		};
 		6649C172257916BF0021D295 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +82,7 @@
 		6649C17D257916BF0021D295 /* BankApp */ = {
 			isa = PBXGroup;
 			children = (
+				6638A4AB257EBFD600475BBD /* ScreenShots */,
 				6649C17E257916BF0021D295 /* AppDelegate.swift */,
 				6649C180257916BF0021D295 /* SceneDelegate.swift */,
 				6638A4A6257EB21B00475BBD /* ExcelFormulas.swift */,
@@ -138,8 +152,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6638A4AF257EBFE900475BBD /* ScreenShot02.png in Resources */,
 				6649C18B257916C10021D295 /* LaunchScreen.storyboard in Resources */,
 				6649C188257916C10021D295 /* Assets.xcassets in Resources */,
+				6638A4AE257EBFE900475BBD /* ScreenShot01.png in Resources */,
 				6649C186257916BF0021D295 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
