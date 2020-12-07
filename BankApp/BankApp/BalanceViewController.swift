@@ -9,11 +9,21 @@ import UIKit
 
 class BalanceViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        //view.backgroundColor = .blue
+    @IBOutlet weak var balanceLabel: UILabel!
+    
+    var balance = 0 {
+        didSet {
+            balanceLabel.text = "\(balance) ₽"
+        }
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        updateBalance()
+    }
+    
+    func updateBalance() {
+        balance = Int.random(in: 0...1_000_000)
+    }
 
 }
 
