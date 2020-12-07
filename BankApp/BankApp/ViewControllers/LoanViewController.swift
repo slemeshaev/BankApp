@@ -32,11 +32,19 @@ class LoanViewController: UIViewController {
     
     // MARK: - Methods
     func updateMonthlyPaymentLabel() {
-        print(#line, #function,
-              pvTextField.text,
-              nperTextField.text,
-              rateTextField.text,
-              monthlyPaymentLabel.text)
+        monthlyPaymentLabel.text = nil
+        
+        guard let pv = Double(pvTextField.text ?? "") else { return }
+        guard let nper = Double(nperTextField.text ?? "") else { return }
+        guard let rate = Double(rateTextField.text ?? "") else { return }
+        
+        let monthlyPayment = abs(ExcelFormulas.pmt(rate: rate, nper: nper, pv: pv))
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.currencySymbol = ""
+        guard let monthlyPaymentText = formatter.string(from: NSNumber(value: monthlyPayment)) else { return }
+        
+        monthlyPaymentLabel.text = "Ежемесячный платеж:\n\(monthlyPaymentText) ₽"
     }
     
     // MARK: - Actions
